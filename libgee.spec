@@ -1,11 +1,11 @@
 Summary:	GObject collections library
 Name:		libgee
-Version:	0.6.6.1
+Version:	0.8.2
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgee/0.6/%{name}-%{version}.tar.xz
-# Source0-md5:	8baaccafbf5632d3262efcba54e479b0
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgee/0.8/%{name}-%{version}.tar.xz
+# Source0-md5:	d9f3a4660b5b1c0e7dce0b34218deca5
 URL:		http://live.gnome.org/Libgee
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,6 +15,8 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	vala
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		apiver	0.8
 
 %description
 libgee is a collections library providing GObject-based interfaces and
@@ -56,15 +58,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %ghost %{_libdir}/libgee.so.?
-%attr(755,root,root) %{_libdir}/libgee.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgee-%{apiver}.so.?
+%attr(755,root,root) %{_libdir}/libgee-%{apiver}.so.*.*.*
 %{_libdir}/girepository-1.0/*.typelib
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgee.so
-%{_pkgconfigdir}/gee-1.0.pc
-%{_includedir}/gee-1.0
-%{_datadir}/gir-1.0/Gee-1.0.gir
-%{_datadir}/vala/vapi/gee-1.0.vapi
+%attr(755,root,root) %{_libdir}/libgee-%{apiver}.so
+%{_pkgconfigdir}/gee-%{apiver}.pc
+%{_includedir}/gee-%{apiver}
+%{_datadir}/gir-1.0/Gee-%{apiver}.gir
+%{_datadir}/vala/vapi/gee-%{apiver}.vapi
 
