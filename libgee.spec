@@ -1,19 +1,19 @@
 Summary:	GObject collections library
 Name:		libgee
-Version:	0.14.0
+Version:	0.16.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgee/0.14/%{name}-%{version}.tar.xz
-# Source0-md5:	059468d9905b3f34a899dbdf62e465a8
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgee/0.16/%{name}-%{version}.tar.xz
+# Source0-md5:	12ab75a06a145a48406b2c135a3be191
 URL:		http://live.gnome.org/Libgee
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
-BuildRequires:	gobject-introspection-devel >= 1.40.0
+BuildRequires:	gobject-introspection-devel >= 1.42.0
 BuildRequires:	libtool
 BuildRequires:	pkg-config
-BuildRequires:	vala-vapigen >= 0.24.0
+BuildRequires:	vala-vapigen >= 0.26.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		apiver	0.8
